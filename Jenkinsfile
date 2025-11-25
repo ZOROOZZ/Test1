@@ -9,8 +9,8 @@ pipeline {
         stage('Deploy to Nginx') {
             steps {
                 sh '''
-                sudo cp index.html /var/www/html/index.html
-                sudo systemctl restart nginx
+                sudo /bin/cp index.html /var/www/html/index.html
+                sudo /bin/systemctl restart nginx
                 '''
             }
         }
